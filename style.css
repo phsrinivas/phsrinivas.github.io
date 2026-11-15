@@ -1,0 +1,99 @@
+/* colors */
+:root {
+  --bg: #fdfdfb;
+  --text: #222;
+  --gray: #6b6b6b;
+  --line: #e3e3e0;
+  --link: #1f3a68;
+}
+:root[data-theme="dark"] {
+  --bg: #16171a;
+  --text: #e4e4e0;
+  --gray: #9a9a96;
+  --line: #2e3035;
+  --link: #9cb8ea;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "IBM Plex Sans", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.page {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+a { color: var(--link); }
+a:hover { text-decoration: none; }
+
+/* top bar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 56px;
+  font-size: 15px;
+}
+header .home { color: var(--text); text-decoration: none; font-weight: bold; }
+header nav a { margin-left: 16px; color: var(--gray); }
+header nav a:hover { color: var(--text); }
+#theme {
+  margin-left: 16px;
+  font: inherit;
+  color: var(--gray);
+  background: none;
+  border: 0;
+  padding: 0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+h1 { font-size: 34px; font-weight: 600; margin: 0 0 16px; }
+h2 {
+  font-size: 15px;
+  font-family: "IBM Plex Mono", Consolas, monospace;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gray);
+  font-weight: normal;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 6px;
+  margin: 56px 0 20px;
+}
+h3 { font-size: 19px; font-weight: 600; margin: 0 0 6px; }
+
+.project { margin-bottom: 36px; }
+.project p { margin: 0 0 10px; }
+.date {
+  font-size: 14px;
+  font-family: "IBM Plex Mono", Consolas, monospace;
+  color: var(--gray);
+  margin-left: 6px;
+}
+.links { font-size: 16px; }
+
+
+footer {
+  margin-top: 64px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+  color: var(--gray);
+}
+
+@media (max-width: 500px) {
+  body { font-size: 17px; }
+  header { margin-bottom: 40px; }
+  header nav a:first-child { margin-left: 0; }
+  h1 { font-size: 30px; }
+}
+
+#about h3 { margin-top: 28px; }

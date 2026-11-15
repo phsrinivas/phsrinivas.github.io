@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pranav Srinivas</title>
+<meta name="description" content="Pranav Srinivas. High school junior in New Jersey. Airplanes, fluid dynamics and building things for the web.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M2 18c8-9 20-10 28-4-8-1-18 0-28 4z' fill='%231f3a68'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+  // use the saved theme before the page draws so it doesn't flash
+  try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+</head>
+<body>
+
+<div class="page">
+
+  <header>
+    <a class="home" href="./">Pranav Srinivas</a>
+    <nav>
+      <a href="#projects">projects</a>
+      <a href="#about">about</a>
+      <a href="#contact">contact</a>
+      <button id="theme" type="button">dark</button>
+    </nav>
+  </header>
+
+  <section class="intro">
+    <h1>Hi, I'm Pranav.</h1>
+    <p>I'm a junior in high school in New Jersey. I want to be an aerospace engineer, so most of what I build ends up being about airplanes, airflow or the software people use to simulate them.</p>
+    <p>Lately I've been testing wing shapes, helping a university research group with their fluid dynamics code, and building small web tools when I see a problem I can fix.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3><a href="https://phsrinivas.github.io/naca2412-airfoil-study/">NACA 2412 airfoil study</a> <span class="date">Oct 2026</span></h3>
+      <p>I wanted to know if a small change to the Cessna 172's wing could make it more efficient. I ran 64 tests in NASA FoilSim (4 cambers, 4 thicknesses, 4 angles of attack), then flew the best three shapes against the stock wing in climb, cruise and approach.</p>
+      <p>The best shape in round one (NACA 2408, L/D of 14.46 vs 12.06 for the stock wing) only won at cruise, by 4.7%. The other two lost everywhere. Lesson learned: one test condition doesn't tell you much, and the 1930s design is pretty hard to beat for a trainer. I turned it into a site with a wing lab and a little guessing game.</p>
+      <p class="links"><a href="https://phsrinivas.github.io/naca2412-airfoil-study/">site</a> · <a href="https://github.com/phsrinivas/naca2412-airfoil-study">code</a></p>
+    </div>
+
+    <div class="project">
+      <h3><a href="https://phsrinivas.github.io/jexpresso-site/">Jexpresso website</a> <span class="date">Oct–Nov 2026</span></h3>
+      <p>Jexpresso is a Julia code for simulating fluids and atmospheres on CPUs and GPUs, made by Professor Simone Marras's group. They're getting more users and needed a real website, so I built one: a home page, install guide, a gallery of their simulations, and a page for the team and how to cite it. It's plain HTML and CSS on purpose so anyone in the group can edit it.</p>
+      <p class="links"><a href="https://phsrinivas.github.io/jexpresso-site/">site</a> · <a href="https://github.com/phsrinivas/jexpresso-site">code</a></p>
+    </div>
+
+    <div class="project">
+      <h3><a href="https://phsrinivas.github.io/cleardose/">ClearDose</a> <span class="date">Nov 2026</span></h3>
+      <p>For the STEM2Connect AI Hackathon. You take a photo of a prescription label and it explains it in plain words, in your own language. "Take 1 tab PO BID" becomes "take 1 tablet by mouth, 2 times a day." It can read the explanation out loud and set reminders, and if the photo is too blurry it tells you to ask your pharmacist instead of guessing.</p>
+      <p class="links"><a href="https://phsrinivas.github.io/cleardose/">site</a> · <a href="https://github.com/phsrinivas/cleardose">code</a></p>
+    </div>
+
+    <div class="project">
+      <h3><a href="https://github.com/smarras79/Jexpresso">Working on Jexpresso</a> <span class="date">Aug 2026 – now</span></h3>
+      <p>Besides the website, I've been learning my way around the solver itself: running test cases, looking through the gmsh meshes it uses (<a href="https://github.com/phsrinivas/JexpressoMeshes">JexpressoMeshes</a>), and figuring out how a real research codebase is organized and kept up to date.</p>
+      <p class="links"><a href="https://github.com/phsrinivas/Jexpresso">my fork</a></p>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About me</h2>
+    <p>I've always wanted to know how things actually work, and for me that's mostly airplanes. Why is a wing shaped the way it is? Could a small change make it better? My airfoil study started with exactly those questions, and the answer (mostly "no, the 1930s engineers got it right") taught me more than a win would have.</p>
+    <p>Working with the Jexpresso group has been my first look at real research software. I'm learning Julia, how meshes for simulations are made, and how a team keeps a big codebase organized and documented. Building their website was a good way to give something back while I learn.</p>
+    <p>I like projects that help people directly too. ClearDose came from thinking about how confusing medicine labels are, especially if English isn't your first language.</p>
+
+    <h3>Outside of school</h3>
+    <p>I go biking a lot. It's how I clear my head, and it's also a pretty good way to think about drag and why cyclists ride the way they do. I'm also really into geography. I like learning about countries, maps, borders and why cities ended up where they are.</p>
+
+    <h3>What's next</h3>
+    <p>Getting my airfoil paper published at a conference. After that, adding stall speed to the study and maybe modeling a full 3D wing.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email me at <a href="mailto:pranavh.srinivas@gmail.com">pranavh.srinivas@gmail.com</a>. I'm always up for talking about airplanes, research or hackathons.</p>
+    <p class="links"><a href="https://github.com/phsrinivas">GitHub</a> · <a href="https://devpost.com/phsrinivas">Devpost</a></p>
+  </section>
+
+  <footer>
+    <p>Pranav Srinivas, New Jersey · <a href="https://github.com/phsrinivas/phsrinivas.github.io">source</a></p>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
